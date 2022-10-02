@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_incicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:visibility="gone"
+        app:indicatorDirectionLinear="endToStart"
+        app:trackThickness="2.8dp"
+        tools:visibility="visible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/all_default_layout_offset_8"
+        android:paddingHorizontal="@dimen/all_default_layout_offset_8"
+        android:text="Preencha os dados"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textColor="@color/colorPrimary" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/all_default_layout_offset_8"
+        app:flexDirection="column">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrição"
+            android:padding="@dimen/all_default_layout_offset_4"
+            app:boxBackgroundColor="@android:color/white"
+            app:startIconDrawable="@drawable/ic_edit">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinput_descricao"
+                android:layout_width="match_parent"
+                tools:text="Salário"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor"
+            android:padding="@dimen/all_default_layout_offset_4"
+            app:boxBackgroundColor="@android:color/white"
+            app:startIconDrawable="@drawable/ic_money">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinput_valor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="R$ 0,00" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data"
+            android:padding="@dimen/all_default_layout_offset_4"
+            app:boxBackgroundColor="@android:color/white"
+            app:startIconDrawable="@drawable/ic_calendar">
+
+            <br.com.myself.components.CalendarPickerEditText
+                android:id="@+id/calendar_picker_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_salvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/all_default_layout_offset_8"
+            android:layout_marginHorizontal="@dimen/all_default_layout_offset_4"
+            android:text="Salvar"
+            app:cornerRadius="@dimen/all_default_layout_offset_16" />
+    </com.google.android.flexbox.FlexboxLayout>
+</LinearLayout>

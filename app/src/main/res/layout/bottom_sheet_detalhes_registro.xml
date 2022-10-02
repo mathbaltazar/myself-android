@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/all_default_layout_offset_4"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroung_gradient_app_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="DETALHES"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_excluir"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/all_default_layout_offset_4"
+                app:cornerRadius="21dp"
+                app:icon="@drawable/ic_delete"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_editar"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/all_default_layout_offset_4"
+                android:layout_toStartOf="@id/button_excluir"
+                app:cornerRadius="21dp"
+                app:icon="@drawable/ic_edit"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/white" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/all_default_layout_offset_8">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_default_layout_offset_8"
+                android:text="DESCRIÇÃO: "
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/textview_descricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/all_default_layout_offset_8"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold"
+                tools:text="Academia" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VALOR: "
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/textview_valor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/all_default_layout_offset_8"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold|italic"
+                tools:text="R$ 250,00" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DATA: "
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/textview_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/all_default_layout_offset_8"
+                android:text="25/10/2020"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OUTROS: "
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/textview_outros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/all_default_layout_offset_8"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="italic"
+                tools:text="Pago com atraso" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.financas.registros.PesquisarRegistrosFragment"
+    tools:ignore="HardcodedText">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutBusca"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/all_default_layout_offset_8"
+        app:endIconDrawable="@drawable/ic_search"
+        app:endIconMode="custom"
+        app:helperText="Resultado: 0"
+        app:helperTextTextColor="@color/colorPrimary"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite a sua busca..."
+            android:imeOptions="actionSearch"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_view_nenhuma_busca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/all_default_layout_offset_8"
+        android:text="Nenhuma busca."
+        android:textAlignment="center" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/all_default_layout_offset_8"
+        android:layout_marginTop="@dimen/all_default_layout_offset_8" />
+
+</LinearLayout>

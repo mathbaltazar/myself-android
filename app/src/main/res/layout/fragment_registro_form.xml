@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/all_default_layout_offset_8"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/all_default_layout_offset_4"
+        android:paddingHorizontal="@dimen/all_default_layout_offset_8"
+        android:text="Preencha os dados"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textColor="@color/colorPrimary" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/all_default_layout_offset_8"
+        android:hint="Descrição"
+        android:padding="@dimen/all_default_layout_offset_4"
+        app:boxBackgroundColor="@android:color/white"
+        app:startIconCheckable="true"
+
+        app:startIconDrawable="@drawable/ic_edit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textinput_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"
+            tools:text="Pão + Bolo" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Valor"
+        android:padding="@dimen/all_default_layout_offset_4"
+        app:boxBackgroundColor="@android:color/white"
+        app:startIconDrawable="@drawable/ic_money">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textinput_valor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="R$ 0,00" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Outros"
+        android:padding="@dimen/all_default_layout_offset_4"
+        app:boxBackgroundColor="@android:color/white"
+        app:startIconDrawable="@drawable/ic_info">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textinput_outros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Data"
+        android:padding="@dimen/all_default_layout_offset_4"
+        app:boxBackgroundColor="@android:color/white"
+        app:startIconDrawable="@drawable/ic_calendar">
+
+        <br.com.myself.components.CalendarPickerEditText
+            android:id="@+id/calendar_picker_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_registrar"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/all_default_layout_offset_4"
+        android:layout_marginTop="@dimen/all_default_layout_offset_8"
+        android:background="@drawable/backgroung_rounded_gradient_app_color"
+        android:text="Salvar"
+        android:textSize="18sp"
+        app:backgroundTint="@null"
+        app:elevation="@dimen/all_default_layout_offset_8" />
+
+</LinearLayout>
