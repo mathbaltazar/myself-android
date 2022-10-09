@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroung_gradient_app_color"
-    tools:context=".ui.financas.registros.RegistrosFragment"
+    tools:context=".presentation.ui.financas.registros.RegistrosFragment"
     tools:ignore="HardcodedText">
 
     <include

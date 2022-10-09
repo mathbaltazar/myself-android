@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgroung_gradient_app_color"
     android:orientation="vertical"
-    tools:context="br.com.myself.ui.home.HomeActivity"
+    tools:context="br.com.myself.presentation.ui.home.HomeActivity"
     tools:ignore="ContentDescription,HardcodedText,UseCompoundDrawables">
 
     <LinearLayout
@@ -63,7 +63,7 @@
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
-                app:icon="@drawable/ic_despesa"
+                app:icon="@drawable/ic_text"
                 app:iconGravity="textTop"
                 app:iconPadding="@dimen/all_default_layout_offset_16"
                 app:iconSize="48dp"

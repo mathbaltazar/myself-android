@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/off_primary"
-    tools:context=".ui.financas.entradas.EntradasFragment"
+    tools:context=".presentation.ui.financas.entradas.EntradasFragment"
     tools:ignore="HardcodedText,ContentDescription">
 
     <com.google.android.flexbox.FlexboxLayout

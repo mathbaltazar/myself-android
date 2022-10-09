@@ -17,7 +17,6 @@
     <item
         android:id="@+id/despesas_dest"
         android:enabled="true"
-        android:icon="@drawable/ic_despesa"
         android:title="Despesas"
         app:showAsAction="ifRoom" />
 

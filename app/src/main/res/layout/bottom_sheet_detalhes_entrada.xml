@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".ui.financas.entradas.DetalhesEntradaBottomSheet"
+    tools:context=".presentation.ui.financas.entradas.DetalhesEntradaBottomSheet"
     tools:ignore="HardcodedText">
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/all_default_layout_offset_8"
-            android:button="@drawable/ic_despesa"
+            android:button="@drawable/ic_text"
             android:gravity="top"
             android:paddingHorizontal="8dp"
             android:textColor="?android:attr/colorControlNormal"

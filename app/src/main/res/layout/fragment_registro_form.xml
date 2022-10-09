@@ -79,7 +79,7 @@
         app:boxBackgroundColor="@android:color/white"
         app:startIconDrawable="@drawable/ic_calendar">
 
-        <br.com.myself.components.CalendarPickerEditText
+        <br.com.myself.presentation.components.CalendarPickerEditText
             android:id="@+id/calendar_picker_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
