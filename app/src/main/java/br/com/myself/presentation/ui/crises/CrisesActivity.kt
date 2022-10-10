@@ -12,7 +12,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.myself.R
-import br.com.myself.application.viewmodel.CrisesActivityViewModel
+import br.com.myself.presentation.viewmodel.CrisesActivityViewModel
 import br.com.myself.databinding.ActivityCrisesBinding
 import br.com.myself.domain.Crise
 import br.com.myself.presentation.adapter.CrisesAdapter

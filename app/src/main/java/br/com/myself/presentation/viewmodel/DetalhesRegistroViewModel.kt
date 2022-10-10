@@ -1,4 +1,4 @@
-package br.com.myself.application.viewmodel
+package br.com.myself.presentation.viewmodel
 
 import androidx.lifecycle.*
 import androidx.lifecycle.viewmodel.CreationExtras

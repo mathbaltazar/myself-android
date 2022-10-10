@@ -8,7 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.myself.R
-import br.com.myself.application.viewmodel.EntradaViewModel
+import br.com.myself.presentation.viewmodel.EntradaViewModel
 import br.com.myself.databinding.FragmentEntradasBinding
 import br.com.myself.infrastructure.injectors.longSnackBar
 import br.com.myself.infrastructure.injectors.provideEntradaRepo

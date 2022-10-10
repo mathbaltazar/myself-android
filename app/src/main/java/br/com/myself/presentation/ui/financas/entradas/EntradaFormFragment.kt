@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import br.com.myself.R
-import br.com.myself.application.viewmodel.EntradaFormViewModel
+import br.com.myself.presentation.viewmodel.EntradaFormViewModel
 import br.com.myself.databinding.FragmentEntradaFormBinding
 import br.com.myself.infrastructure.injectors.provideEntradaRepo
 import br.com.myself.presentation.util.CurrencyMask

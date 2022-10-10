@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import br.com.myself.R
-import br.com.myself.application.viewmodel.RegistroFormViewModel
+import br.com.myself.presentation.viewmodel.RegistroFormViewModel
 import br.com.myself.databinding.FragmentRegistroFormBinding
 import br.com.myself.infrastructure.injectors.longSnackBar
 import br.com.myself.infrastructure.injectors.provideRegistroRepo
