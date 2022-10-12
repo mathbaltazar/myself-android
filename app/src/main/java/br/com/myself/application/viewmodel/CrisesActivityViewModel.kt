@@ -1,4 +1,4 @@
-package br.com.myself.presentation.viewmodel
+package br.com.myself.application.viewmodel
 
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData

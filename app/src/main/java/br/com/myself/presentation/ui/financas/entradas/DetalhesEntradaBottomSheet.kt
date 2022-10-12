@@ -10,7 +10,7 @@ import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import br.com.myself.presentation.viewmodel.DetalhesEntradaViewModel
+import br.com.myself.application.viewmodel.DetalhesEntradaViewModel
 import br.com.myself.databinding.BottomSheetDetalhesEntradaBinding
 import br.com.myself.infrastructure.injectors.longSnackBar
 import br.com.myself.infrastructure.injectors.provideEntradaRepo

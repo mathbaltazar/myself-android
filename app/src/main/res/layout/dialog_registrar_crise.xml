@@ -15,7 +15,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/backgroung_gradient_app_color"
             android:padding="@dimen/all_default_layout_offset_8"
             android:text="CRISE"
             android:textAlignment="center"
@@ -130,8 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/all_default_layout_offset_8"
-                android:text="Salvar"
-                app:backgroundTint="@color/colorAccent" />
+                android:text="Salvar" />
         </LinearLayout>
 
 

@@ -15,7 +15,7 @@
         android:paddingHorizontal="@dimen/all_default_layout_offset_8"
         android:text="Preencha os dados"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="?attr/colorPrimary" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
@@ -94,7 +94,6 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/all_default_layout_offset_4"
         android:layout_marginTop="@dimen/all_default_layout_offset_8"
-        android:background="@drawable/backgroung_rounded_gradient_app_color"
         android:text="Salvar"
         android:textSize="18sp"
         app:backgroundTint="@null"

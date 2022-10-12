@@ -69,7 +69,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_anexo"
                         android:visibility="invisible"
-                        app:tint="@color/colorPrimary"
+                        app:tint="?attr/colorPrimary"
                         tools:visibility="visible" />
 
                     <ImageView
@@ -78,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_cloud"
                         android:visibility="invisible"
-                        app:tint="@color/colorPrimary"
+                        app:tint="?attr/colorPrimary"
                         tools:visibility="visible" />
                 </LinearLayout>
 
@@ -87,7 +87,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/all_default_layout_offset_4"
-                    android:textColor="@color/colorAccent"
                     android:textSize="@dimen/text_size_24"
                     tools:text="R$ 45,00" />
             </LinearLayout>

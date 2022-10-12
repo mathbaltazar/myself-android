@@ -10,7 +10,7 @@ import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import br.com.myself.presentation.viewmodel.DetalhesRegistroViewModel
+import br.com.myself.application.viewmodel.DetalhesRegistroViewModel
 import br.com.myself.databinding.BottomSheetDetalhesRegistroBinding
 import br.com.myself.infrastructure.injectors.provideRegistroRepo
 import br.com.myself.presentation.ui.confirmation.CONFIRMATION_DIALOG_RESULT

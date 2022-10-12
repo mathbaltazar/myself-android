@@ -1,6 +1,5 @@
 package br.com.myself.presentation.ui.home
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +9,6 @@ import br.com.myself.presentation.notification.Notification
 import br.com.myself.presentation.ui.crises.CrisesActivity
 import br.com.myself.presentation.ui.financas.FinancasActivity
 import com.google.firebase.messaging.FirebaseMessaging
-import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 class HomeActivity : AppCompatActivity() {
     
@@ -58,9 +56,5 @@ class HomeActivity : AppCompatActivity() {
             dialog.show()*/
         }
         firstUse = false
-    }
-    
-    override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
 }

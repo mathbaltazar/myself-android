@@ -1,7 +1,6 @@
 package br.com.myself.presentation.ui.crises
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
@@ -12,12 +11,11 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.myself.R
-import br.com.myself.presentation.viewmodel.CrisesActivityViewModel
+import br.com.myself.application.viewmodel.CrisesActivityViewModel
 import br.com.myself.databinding.ActivityCrisesBinding
 import br.com.myself.domain.Crise
 import br.com.myself.presentation.adapter.CrisesAdapter
 import br.com.myself.presentation.util.Utils.Companion.formattedDate
-import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 class CrisesActivity : AppCompatActivity() {
     
@@ -110,10 +108,6 @@ class CrisesActivity : AppCompatActivity() {
                 }
                 
             }.setNegativeButton("Cancelar", null).show()
-    }
-    
-    override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
     
 }

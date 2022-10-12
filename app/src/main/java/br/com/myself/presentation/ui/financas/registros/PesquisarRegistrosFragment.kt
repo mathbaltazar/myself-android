@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.myself.R
-import br.com.myself.presentation.viewmodel.PesquisarRegistrosViewModel
+import br.com.myself.application.viewmodel.PesquisarRegistrosViewModel
 import br.com.myself.databinding.FragmentPesquisarRegistrosBinding
 import br.com.myself.infrastructure.injectors.provideRegistroRepo
 import br.com.myself.presentation.adapter.RegistroAdapter

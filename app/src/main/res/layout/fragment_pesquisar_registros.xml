@@ -17,7 +17,7 @@
         app:endIconDrawable="@drawable/ic_search"
         app:endIconMode="custom"
         app:helperText="Resultado: 0"
-        app:helperTextTextColor="@color/colorPrimary"
+        app:helperTextTextColor="?attr/colorPrimary"
         app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText

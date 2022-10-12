@@ -8,7 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.myself.R
-import br.com.myself.presentation.viewmodel.EntradaViewModel
+import br.com.myself.application.viewmodel.EntradaViewModel
 import br.com.myself.databinding.FragmentEntradasBinding
 import br.com.myself.infrastructure.injectors.longSnackBar
 import br.com.myself.infrastructure.injectors.provideEntradaRepo
@@ -71,10 +71,10 @@ class EntradasFragment : Fragment(R.layout.fragment_entradas) {
     
     private fun subscribeFragmentResultListeners() {
         setFragmentResultListener(REQUEST_KEY_ENTRADA_DETAILS_CLOSE) { _, bdl ->
-            if (bdl.containsKey(FRAGMENT_RESULT_IS_ENTRADA_EDITING) && !bdl.getBoolean(
-                    FRAGMENT_RESULT_IS_ENTRADA_EDITING
-                ))
-            viewModel.fecharDetalhesEntrada()
+            if (bdl.containsKey(FRAGMENT_RESULT_IS_ENTRADA_EDITING)
+                && !bdl.getBoolean(FRAGMENT_RESULT_IS_ENTRADA_EDITING)) {
+                viewModel.fecharDetalhesEntrada()
+            }
         }
     }
     

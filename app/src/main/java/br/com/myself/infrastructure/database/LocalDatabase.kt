@@ -5,7 +5,6 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import br.com.myself.BuildConfig
 import br.com.myself.domain.Crise
 import br.com.myself.domain.Entrada
 import br.com.myself.domain.Registro
@@ -30,13 +29,13 @@ abstract class LocalDatabase : RoomDatabase() {
     abstract fun getCriseDAO(): CriseDAO
     
     companion object {
-        private const val NAME = BuildConfig.DATABASE_NAME
-        var instance: LocalDatabase? = null
+        private const val DATABASE_NAME = "myself_db"
+        private var instance: LocalDatabase? = null
         fun getInstance(context: Context) = synchronized(this) {
             instance ?: Room.databaseBuilder(
                 context.applicationContext,
                 LocalDatabase::class.java,
-                NAME
+                DATABASE_NAME
             ).fallbackToDestructiveMigration()
                 .build()
                 .also { instance = it }

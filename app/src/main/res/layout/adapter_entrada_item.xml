@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/all_default_layout_offset_8"
             android:layout_marginTop="@dimen/all_default_layout_offset_8"
-            android:textColor="@color/colorAccent"
             android:textSize="@dimen/text_size_30"
             android:textStyle="bold"
             tools:text="R$ 45,00" />
