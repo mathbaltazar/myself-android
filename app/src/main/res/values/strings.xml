@@ -1,3 +1,25 @@
 <resources>
+    <!--GENERAL-->
     <string name="app_name">Myself</string>
+
+    <string name="not_found">Nada por aqui.</string>
+    <string name="myself">myself</string>
+
+
+
+    <!--component_expenses_resume_board.xml-->
+    <string name="current_month">Despesas do mês:</string>
+    <string name="settled">Pago:</string>
+
+    <!--activity_home.xml-->
+    <string name="my_controls">Meus controles</string>
+    <string name="finances">Finanças</string>
+    <string name="neuro">Neuro</string>
+    <string name="data">Dados</string>
+    <string name="develop_by">Desenvolvido por</string>
+    <string name="full_name">Matheus Baltazar De Lima</string>
+    <string name="menu_bottom_nav_expenses">Despesas</string>
+    <string name="menu_bottom_nav_incomes">Entradas</string>
+    <string name="menu_bottom_nav_plannings">Planos</string>
+    <string name="fragment_expense_title">Despesas</string>
 </resources>

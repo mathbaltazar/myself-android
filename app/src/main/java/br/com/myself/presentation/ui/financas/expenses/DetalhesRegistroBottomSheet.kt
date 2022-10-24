@@ -1,4 +1,4 @@
-package br.com.myself.presentation.ui.financas.registros
+package br.com.myself.presentation.ui.financas.expenses
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -68,7 +68,7 @@ class DetalhesRegistroBottomSheet : BottomSheetDialogFragment() {
                 is DetalhesRegistroViewModel.Event.OnEdit -> {
                     isEditing = true
                     val title = "Editar Registro"
-                    val direction = RegistrosFragmentDirections.toRegistroFormDest(event.registro, title)
+                    val direction = ExpensesFragmentDirections.toRegistroFormDest(event.registro, title)
                     findNavController().navigate(direction)
                 }
                 is DetalhesRegistroViewModel.Event.OnDelete -> {

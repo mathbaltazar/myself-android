@@ -1,4 +1,4 @@
-package br.com.myself.presentation.ui.financas.registros
+package br.com.myself.presentation.ui.financas.expenses
 
 import android.os.Bundle
 import android.view.View

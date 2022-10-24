@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/all_default_layout_offset_8"
-            android:button="@drawable/ic_text"
+            android:button="@drawable/ic_expenses"
             android:gravity="top"
             android:paddingHorizontal="8dp"
             android:textColor="?android:attr/colorControlNormal"

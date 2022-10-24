@@ -40,7 +40,7 @@ class EntradasFragment : Fragment(R.layout.fragment_entradas) {
             viewModel.avancarAno()
         }
         
-        binding.buttonAdicionar.setOnClickListener {
+        binding.buttonAddExpense.setOnClickListener {
             val direction = EntradasFragmentDirections.toEntradaFormDest()
             findNavController().navigate(direction)
         }

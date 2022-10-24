@@ -1,19 +1,12 @@
 package br.com.myself.presentation.util
 
-import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import android.graphics.Point
 import android.view.WindowManager
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleCoroutineScope
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
-import br.com.myself.presentation.util.Utils.Companion.observe
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.launch
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
@@ -23,9 +16,8 @@ const val DEFAULT_REQUEST_LOAD_SIZE = 5
 
 class Utils {
     companion object {
-    
-        @SuppressLint("ConstantLocale")
-        private val mLocale = Locale.getDefault()
+
+        private var mLocale = Locale.getDefault()
         private const val mPattern = "dd/MM/yyyy"
         
         private val sdf = SimpleDateFormat(mPattern, mLocale)
@@ -55,9 +47,9 @@ class Utils {
         }
 
         fun formatCurrency(valor: Double?): String {
-            return NumberFormat.getCurrencyInstance(mLocale)
+            return NumberFormat.getCurrencyInstance(Locale.getDefault())
                 .format(valor ?: 0)
-                .replace("R$", "R$ ")
+                .replace("R$", "$")
                 .trim()
         }
 

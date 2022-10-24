@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/financas_nav_graph"
-    app:startDestination="@id/registros_dest">
+    app:startDestination="@id/expenses_dest">
 
     <fragment
-        android:id="@+id/registros_dest"
-        android:name="br.com.myself.presentation.ui.financas.registros.RegistrosFragment"
-        android:label="Registros"
-        tools:layout="@layout/fragment_registros">
+        android:id="@+id/expenses_dest"
+        android:name="br.com.myself.presentation.ui.financas.expenses.ExpensesFragment"
+        android:label="@string/fragment_expense_title"
+        tools:layout="@layout/fragment_expenses">
         <action
             android:id="@+id/to_pesquisar_registro_dest"
             app:destination="@id/pesquisar_registro_dest" />
@@ -25,7 +25,7 @@
             app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
-        android:id="@+id/entradas_dest"
+        android:id="@+id/incomes_dest"
         android:name="br.com.myself.presentation.ui.financas.entradas.EntradasFragment"
         android:label="Entradas"
         tools:layout="@layout/fragment_entradas">
@@ -88,7 +88,7 @@
         app:destination="@id/confirmation_dest" />
     <fragment
         android:id="@+id/pesquisar_registro_dest"
-        android:name="br.com.myself.presentation.ui.financas.registros.PesquisarRegistrosFragment"
+        android:name="br.com.myself.presentation.ui.financas.expenses.PesquisarRegistrosFragment"
         android:label="Pesquisar"
         tools:layout="@layout/fragment_pesquisar_registros">
 
@@ -98,7 +98,7 @@
     </fragment>
     <dialog
         android:id="@+id/detalhes_registro_dest"
-        android:name="br.com.myself.presentation.ui.financas.registros.DetalhesRegistroBottomSheet"
+        android:name="br.com.myself.presentation.ui.financas.expenses.DetalhesRegistroBottomSheet"
         tools:layout="@layout/bottom_sheet_detalhes_registro">
         <argument
             android:name="registro_id"
@@ -113,7 +113,7 @@
     </dialog>
     <fragment
         android:id="@+id/registro_form_dest"
-        android:name="br.com.myself.presentation.ui.financas.registros.RegistroFormFragment"
+        android:name="br.com.myself.presentation.ui.financas.expenses.RegistroFormFragment"
         android:label="{title}"
         tools:layout="@layout/fragment_registro_form">
 

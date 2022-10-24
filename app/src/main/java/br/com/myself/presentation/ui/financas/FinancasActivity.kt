@@ -20,7 +20,7 @@ class FinancasActivity : AppCompatActivity() {
         val navController = (binding.navHostContainer.getFragment() as NavHostFragment).navController
         NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
         val config = AppBarConfiguration(
-            topLevelDestinationIds = setOf(R.id.registros_dest, R.id.despesas_dest, R.id.entradas_dest),
+            topLevelDestinationIds = setOf(R.id.expenses_dest, R.id.incomes_dest, R.id.plannings_dest),
             fallbackOnNavigateUpListener = ::onSupportNavigateUp
         )
         NavigationUI.setupWithNavController(binding.toolbar, navController, config)

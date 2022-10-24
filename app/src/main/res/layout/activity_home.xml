@@ -1,109 +1,100 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/shape_theme_gradient"
     android:orientation="vertical"
     tools:context="br.com.myself.presentation.ui.home.HomeActivity"
-    tools:ignore="ContentDescription,HardcodedText,UseCompoundDrawables">
+    tools:ignore="ContentDescription,HardcodedText">
 
-    <LinearLayout
+
+    <com.google.android.flexbox.FlexboxLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        app:alignItems="center"
+        app:flexDirection="column">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="@dimen/all_default_layout_offset_16"
-            android:text="myself"
-            android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:text="@string/myself"
+            android:textAppearance="@style/TextAppearance.Material3.ActionBar.Title"
+            android:textAlignment="center" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.ActionBar.Subtitle"
             android:layout_marginTop="48dp"
-            android:gravity="center"
-            android:text="Meus controles"
-            android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:text="@string/my_controls"
+            android:textColor="@color/md_theme_light_onPrimary"
+            android:textAlignment="center" />
 
-        <com.google.android.flexbox.FlexboxLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:alignItems="center"
-            app:flexDirection="column"
-            app:justifyContent="space_evenly">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_finances"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+            android:layout_width="@dimen/button_home_controls_160"
+            android:layout_height="@dimen/button_home_controls_160"
+            android:text="@string/finances"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textColor="@color/md_theme_light_onPrimary"
+            app:cornerRadius="@dimen/button_home_controls_corner_radius_24"
+            app:icon="@drawable/ic_expenses"
+            app:iconGravity="textTop"
+            app:iconPadding="@dimen/all_default_layout_offset_16"
+            app:iconSize="@dimen/button_home_controls_icon_36"
+            app:iconTint="@color/md_theme_light_onPrimary" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_financas"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:text="Finanças"
-                android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                app:icon="@drawable/ic_registros"
-                app:iconGravity="textTop"
-                app:iconPadding="@dimen/all_default_layout_offset_16"
-                app:iconSize="48dp"
-                app:iconTint="@android:color/white"
-                app:strokeColor="@android:color/white" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_neuro"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+            android:layout_width="@dimen/button_home_controls_160"
+            android:layout_height="@dimen/button_home_controls_160"
+            android:text="@string/neuro"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textColor="@color/md_theme_light_onPrimary"
+            app:cornerRadius="@dimen/button_home_controls_corner_radius_24"
+            app:icon="@drawable/ic_brain"
+            app:iconGravity="textTop"
+            app:iconPadding="@dimen/all_default_layout_offset_16"
+            app:iconSize="@dimen/button_home_controls_icon_36"
+            app:iconTint="@color/md_theme_light_onPrimary" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_crises"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:text="Crises"
-                android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                app:icon="@drawable/ic_text"
-                app:iconGravity="textTop"
-                app:iconPadding="@dimen/all_default_layout_offset_16"
-                app:iconSize="48dp"
-                app:iconTint="@android:color/white"
-                app:strokeColor="@android:color/white" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:text="Dados"
-                android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                app:icon="@drawable/ic_cloud"
-                app:iconGravity="textTop"
-                app:iconPadding="@dimen/all_default_layout_offset_16"
-                app:iconSize="48dp"
-                app:iconTint="@android:color/white"
-                app:strokeColor="@android:color/white" />
-
-        </com.google.android.flexbox.FlexboxLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_data_management"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+            android:layout_width="@dimen/button_home_controls_160"
+            android:layout_height="@dimen/button_home_controls_160"
+            android:text="@string/data"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textColor="@color/md_theme_light_onPrimary"
+            app:cornerRadius="@dimen/button_home_controls_corner_radius_24"
+            app:icon="@drawable/ic_cloud"
+            app:iconGravity="textTop"
+            app:iconPadding="@dimen/all_default_layout_offset_16"
+            app:iconSize="@dimen/button_home_controls_icon_36"
+            app:iconTint="@color/md_theme_light_onPrimary" />
 
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
-            android:gravity="center"
-            android:text="Desenvolvido por"
+            android:text="@string/develop_by"
+            android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_size_16" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="64dp"
-            android:gravity="center"
-            android:text="Matheus Baltazar"
+            android:text="@string/full_name"
+            android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size_16"
             android:textStyle="bold" />
-    </LinearLayout>
-</ScrollView>
+    </com.google.android.flexbox.FlexboxLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -20,12 +20,12 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
         
         // FINANÇAS
-        binding.buttonFinancas.setOnClickListener {
+        binding.buttonFinances.setOnClickListener {
             startActivity(Intent(applicationContext, FinancasActivity::class.java))
         }
     
-        // CRISES
-        binding.buttonCrises.setOnClickListener {
+        // NEURO
+        binding.buttonNeuro.setOnClickListener {
             startActivity(Intent(applicationContext, CrisesActivity::class.java))
         }
     }

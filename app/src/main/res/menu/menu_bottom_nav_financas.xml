@@ -3,21 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/registros_dest"
+        android:id="@+id/expenses_dest"
         android:enabled="true"
-        android:icon="@drawable/ic_registros"
-        android:title="Registros"
+        android:icon="@drawable/ic_expenses"
+        android:title="@string/menu_bottom_nav_expenses"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/entradas_dest"
+        android:id="@+id/incomes_dest"
         android:enabled="true"
         android:icon="@drawable/ic_entradas"
-        android:title="Entradas"
+        android:title="@string/menu_bottom_nav_incomes"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/despesas_dest"
+        android:id="@+id/plannings_dest"
         android:enabled="true"
-        android:title="Despesas"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/menu_bottom_nav_plannings"
         app:showAsAction="ifRoom" />
 
 </menu>

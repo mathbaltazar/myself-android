@@ -1,4 +1,4 @@
-package br.com.myself.presentation.ui.financas.registros
+package br.com.myself.presentation.ui.financas.expenses
 
 import android.os.Bundle
 import android.view.View
@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.myself.R
 import br.com.myself.application.viewmodel.RegistrosViewModel
-import br.com.myself.databinding.FragmentRegistrosBinding
+import br.com.myself.databinding.FragmentExpensesBinding
 import br.com.myself.infrastructure.injectors.provideRegistroRepo
 import br.com.myself.presentation.adapter.RegistroAdapter
 import br.com.myself.presentation.ui.financas.state.RegistrosFragmentUIState
@@ -19,40 +19,37 @@ import br.com.myself.presentation.util.KEY_IS_REGISTRO_DETAILS_SHOWN
 import br.com.myself.presentation.util.KEY_REGISTRO_ID
 import br.com.myself.presentation.util.Utils.Companion.observe
 
-class RegistrosFragment : Fragment(R.layout.fragment_registros) {
+class ExpensesFragment : Fragment(R.layout.fragment_expenses) {
 
     private val viewModel: RegistrosViewModel by viewModels { RegistrosViewModel.Factory(provideRegistroRepo()) }
 
-    private var _binding: FragmentRegistrosBinding? = null
+    private var _binding: FragmentExpensesBinding? = null
     private val binding  get() = _binding!!
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentRegistrosBinding.bind(view)
+        _binding = FragmentExpensesBinding.bind(view)
 
-        // MONTH PAGE
-        binding.buttonPageMesAnterior.setOnClickListener {
+        binding.buttonPreviousMonth.setOnClickListener {
             viewModel.mesAnterior()
         }
-        binding.buttonPageProximoMes.setOnClickListener {
+        binding.buttonNextMonth.setOnClickListener {
             viewModel.proximoMes()
         }
 
-        // AÇÃO BOTÃO PESQUISAR
+        /*// AÇÃO BOTÃO PESQUISAR
         binding.buttonPesquisar.setOnClickListener {
             val direction = RegistrosFragmentDirections.toPesquisarRegistroDest()
             findNavController().navigate(direction)
-        }
+        }*/
 
-        // AÇÃO BOTÃO ADICIONAR (+)
-        binding.buttonAdicionar.setOnClickListener {
-            val direction = RegistrosFragmentDirections.toRegistroFormDest()
+        binding.resumeBoard.buttonAddExpense.setOnClickListener {
+            val direction = ExpensesFragmentDirections.toRegistroFormDest()
             findNavController().navigate(direction)
         }
 
-        // RECYCLER VIEW
-        binding.recyclerviewRegistros.layoutManager = LinearLayoutManager(requireContext())
-        binding.recyclerviewRegistros.adapter = RegistroAdapter()
+        binding.recyclerViewExpenses.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerViewExpenses.adapter = RegistroAdapter()
 
         registerObservers()
     }
@@ -72,16 +69,15 @@ class RegistrosFragment : Fragment(R.layout.fragment_registros) {
         }
 
         viewModel.observeRegistroUIState(viewLifecycleOwner, ::setupView)
-
     }
 
     private fun setupView(state: RegistrosFragmentUIState) {
-        binding.textViewTotalMes.text = state.totalGastos
-        binding.textViewQuantidadeRegistros.text = state.quantidadeGastos
-        binding.textViewMesAnoSelecionado.text = state.labelMesAnoSelecionado
-        binding.textviewNenhumRegistroEncontrado.visibility = if (state.isEmpty) View.VISIBLE else View.GONE
+        binding.resumeBoard.textViewCurrentMonthAmount.text = state.totalGastos
+        binding.resumeBoard.textViewCurrentMonthSettled.text = "$ 0,00" //state.totalPagoNoMes
+        binding.resumeBoard.textViewMonthYearReference.text = state.labelMesAnoSelecionado
+        binding.textViewNotFound.visibility = if (state.isEmpty) View.VISIBLE else View.GONE
 
-        (binding.recyclerviewRegistros.adapter as RegistroAdapter).submitList(state.registros)
+        (binding.recyclerViewExpenses.adapter as RegistroAdapter).submitList(state.registros)
     }
 
     override fun onDestroyView() {
